@@ -2,7 +2,7 @@
   <h3 ng-if="!narrow.hasNoMatchingItems;">Matching Items</h3>
   <h3 ng-if="narrow.hasNoMatchingItems;">No matching items!</h3>
   <ol>
-    <li ng-repeat="item in foundItems">
+    <li ng-repeat="item in narrow.found">
       <b>({{ item.short_name }}) {{ item.name }}</b>
       <br/>
       {{ item.description }}

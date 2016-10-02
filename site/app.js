@@ -23,7 +23,6 @@
           if (foundItems.length > 0) {
             narrow.hasNoMatchingItems = false;
             narrow.found = foundItems;
-            console.log(narrow.found);
           } else {
             narrow.hasNoMatchingItems = true;
           }
