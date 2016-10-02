@@ -77,7 +77,8 @@
       controller: NarrowItDownController,
       controllerAs: 'narrow',
       bindToController: true,
-      link: FoundItemsDirectiveLink
+      link: FoundItemsDirectiveLink,
+      transclude: true
     }
 
     return ddo;
