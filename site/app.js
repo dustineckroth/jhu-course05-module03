@@ -23,6 +23,7 @@
           if (foundItems.length > 0) {
             narrow.hasNoMatchingItems = false;
             narrow.found = foundItems;
+            console.log(narrow.found);
           } else {
             narrow.hasNoMatchingItems = true;
           }
@@ -85,8 +86,8 @@
   }
 
   function FoundItemsDirectiveLink(scope, element, attrs, controller) {
-    scope.$watch('narrow.found'), function(newValue, oldValue) {
-    }
+    scope.$watch('narrow.found'))
+    scope.$watch('narrow.hasNoMatchingItems'))
   }
 
 
