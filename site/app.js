@@ -23,7 +23,7 @@
           if (foundItems.length > 0) {
             narrow.message = "Matching Items";
             narrow.found = foundItems;
-            console.log("narrow.found");
+            console.log("narrow.found (" + narrow.found.length + " items)");
             console.log(narrow.found);
           } else {
             narrow.message = "No matching items!";
