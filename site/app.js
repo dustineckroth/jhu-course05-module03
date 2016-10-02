@@ -80,7 +80,7 @@
       restrict: 'E',
 
       scope: {
-        found: '<',
+        foundItems: '<',
         onRemove: '&',
         listTitle: '@title'
       },
