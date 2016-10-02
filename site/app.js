@@ -90,11 +90,11 @@
   }
 
   function FoundItemsDirectiveLink(scope, element, attrs, controller) {
-    scope.$watch('narrow.found'), function(oldValue, newValue) {
+    scope.$watch('narrow.found', function(oldValue, newValue) {
 
     });
-    scope.$watch('narrow.hasNoMatchingItems'), function(oldValue, newValue) {
-      
+    scope.$watch('narrow.hasNoMatchingItems', function(oldValue, newValue) {
+
     });
   }
 
