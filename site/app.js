@@ -4,7 +4,7 @@
   angular.module('NarrowItDownApp', [])
          .controller('NarrowItDownController', NarrowItDownController)
          .service('MenuSearchService', MenuSearchService)
-         .directive('foundItems', FoundItemsDirective);
+         .component('foundItems', FoundItemsDirective);
 
   NarrowItDownController.$inject = ['MenuSearchService'];
 
