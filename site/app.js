@@ -11,9 +11,7 @@
   function NarrowItDownController(MenuSearchService) {
     var narrow = this;
 
-    narrow.getFoundItems = function() {
-      return MenuSearchService.getFoundItems;
-    }
+    narrow.found = MenuSearchService.getFoundItems;
 
     narrow.getMatchedMenuItems = function() {
 
@@ -29,7 +27,7 @@
     };
 
     narrow.matchingItems = function() {
-      return !(MenuSearchService.getFoundItems.length>0);
+      return (MenuSearchService.getFoundItems.length>0);
     }
   }
 
@@ -86,7 +84,7 @@
   }
 
   function FoundItemsDirectiveLink(scope, element, attrs, controller) {
-    scope.$watch('narrow.getFoundItems()'), function(newValue, oldValue) {
+    scope.$watch('narrow.found'), function(newValue, oldValue) {
     }
   }
 
