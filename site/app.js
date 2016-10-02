@@ -12,6 +12,7 @@
     var narrow = this;
 
     narrow.message = "No matching items!";
+    narrow.searchTerm = "";
     narrow.found = [];
 
     narrow.getMatchedMenuItems = function() {
