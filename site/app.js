@@ -58,7 +58,10 @@
           }
         });
 
+        console.log("Result");
         console.log(result);
+        console.log("Found Items");
+        console.log(foundItems);
 
         // return processed items
         return foundItems;
@@ -70,6 +73,7 @@
     var ddo = {
       templateUrl: 'foundItems.html',
       restrict: 'E',
+
       scope: {
         found: '<',
         onRemove: '&'
@@ -86,8 +90,8 @@
   }
 
   function FoundItemsDirectiveLink(scope, element, attrs, controller) {
-    scope.$watch('narrow.found'))
-    scope.$watch('narrow.hasNoMatchingItems'))
+    scope.$watch('narrow.found'), function(oldValue, newValue) {});
+    scope.$watch('narrow.hasNoMatchingItems'), function(oldValue, newValue) {});
   }
 
 
