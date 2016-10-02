@@ -23,12 +23,20 @@
     narrow.removeItem = function(index) {
       MenuSearchService.removeItem(index);
     };
+
+    narrow.matchingItems = function() {
+      return !(MenuSearchService.getFoundItems.length>0);
+    }
   }
 
   MenuSearchService.$inject = ['$http'];
   function MenuSearchService($http) {
     var service = this;
     var foundItems = [];
+
+    service.getFoundItems = function() {
+      return foundItems;
+    }
 
     service.removeItem = function(index) {
       found.splice(index, 1);
