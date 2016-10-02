@@ -11,7 +11,7 @@
   function NarrowItDownController(MenuSearchService) {
     var narrow = this;
 
-    narrow.found = MenuSearchService.getFoundItems;
+    narrow.found = MenuSearchService.getFoundItems();
 
     narrow.getMatchedMenuItems = function() {
 
@@ -38,11 +38,11 @@
 
     service.getFoundItems = function() {
       return foundItems;
-    }
+    };
 
     service.removeItem = function(index) {
       found.splice(index, 1);
-    }
+    };
 
     service.getMatchedMenuItems = function(searchTerm) {
 
