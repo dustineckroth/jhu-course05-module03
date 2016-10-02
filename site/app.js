@@ -11,7 +11,7 @@
   function NarrowItDownController(MenuSearchService) {
     var narrow = this;
 
-    narrow.hasNoMatchingItems = true;
+    narrow.message = "No matching items!";
     narrow.found = [];
 
     narrow.getMatchedMenuItems = function() {
@@ -21,9 +21,10 @@
 
         promise.then(function (foundItems) {
           if (foundItems.length > 0) {
-            narrow.hasNoMatchingItems = false;
+            narrow.message = "Matching Items";
             narrow.found = foundItems;
           } else {
+            narrow.message = "No matching items!";
             narrow.hasNoMatchingItems = true;
           }
         }).catch(function (error) { console.log(error); });
@@ -75,7 +76,8 @@
 
       scope: {
         found: '<',
-        onRemove: '&'
+        onRemove: '&',
+        listTitle: '@title'
       },
 
       controller: NarrowItDownController,
