@@ -18,7 +18,7 @@
       var promise = MenuSearchService.getMatchedMenuItems(narrow.searchTerm);
 
       promise.then(function (foundItems) {
-        console.log(foundItems);
+        console.log(narrow.found);
       }).catch(function (error) { console.log(error); });
     };
 
