@@ -4,7 +4,7 @@
 
   <h3>{{ narrow.listTitle }}</h3>
 
-  <ol>
+  <ul>
     <li ng-repeat="item in narrow.found">
       HELL-o
       <b>({{ item.short_name }}) {{ item.name }}</b>
@@ -13,6 +13,6 @@
       <button ng-click="onRemove({index: $index});">
         Don't want this one!</button>
     </li>
-  </ol>
+  </ul>
 
 </div>
