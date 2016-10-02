@@ -27,7 +27,7 @@
             console.log(narrow.found);
           } else {
             narrow.message = "No matching items!";
-            narrow.hasNoMatchingItems = true;
+            narrow.found = [];
           }
         }).catch(function (error) { console.log(error); });
       // }
