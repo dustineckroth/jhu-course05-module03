@@ -6,11 +6,15 @@
 
   <ol>
     <li ng-repeat="item in narrow.foundItems">
-      <button ng-click="onRemove({index: $index});">
-        Don't want this one!</button>
+
       <b>({{ item.short_name }}) {{ item.name }}</b>
       <br/>
       {{ item.description }}
+      <br/>
+      <button ng-click="onRemove({index: $index});">
+        Don't want this one!</button>
+      <br/>
+      <br/>
     </li>
   </ol>
 
