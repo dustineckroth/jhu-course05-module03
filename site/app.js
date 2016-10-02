@@ -52,11 +52,13 @@
         // process result and only keep items that match
         foundItems = [];
 
-        result.data.menu_items.forEach(function(item) {
-          if (item.description.indexOf(searchTerm) != -1) {
-            foundItems.push(item);
-          }
-        });
+        if (searchTerm.trim().length > 0) {
+          result.data.menu_items.forEach(function(item) {
+            if (item.description.indexOf(searchTerm) != -1) {
+              foundItems.push(item);
+            }
+          });
+        }
 
         console.log("Result");
         console.log(result);
