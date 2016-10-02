@@ -11,34 +11,35 @@
   function NarrowItDownController(MenuSearchService) {
     var narrow = this;
 
+    narrow.message = "No matching items!";
+    narrow.hasNoMatchingItems = true;
     narrow.found = MenuSearchService.getFoundItems();
 
     narrow.getMatchedMenuItems = function() {
 
-      var promise = MenuSearchService.getMatchedMenuItems(narrow.searchTerm);
+      if (narrow.searchTerm.trim.length > 0) {
+        var promise = MenuSearchService.getMatchedMenuItems(narrow.searchTerm);
 
-      promise.then(function (foundItems) {
-        console.log(narrow.found);
-      }).catch(function (error) { console.log(error); });
+        promise.then(function (foundItems) {
+          if (foundItems.length > 0) {
+            narrow.hasNoMatchingItems = false;
+            narrow.found = foundItems;
+          } else {
+            narrow.hasNoMatchingItems = true;
+          }
+        }).catch(function (error) { console.log(error); });
+      }
     };
 
     narrow.removeItem = function(index) {
       MenuSearchService.removeItem(index);
     };
-
-    narrow.matchingItems = function() {
-      return (MenuSearchService.getFoundItems.length>0);
-    }
   }
 
   MenuSearchService.$inject = ['$http'];
   function MenuSearchService($http) {
     var service = this;
     var foundItems = [];
-
-    service.getFoundItems = function() {
-      return foundItems;
-    };
 
     service.removeItem = function(index) {
       found.splice(index, 1);

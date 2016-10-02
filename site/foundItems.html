@@ -1,5 +1,5 @@
 <div class="row">
-  <h3 ng-if="narrow.matchingItems();">Matching Items</h3>
+  <h3 ng-if="!narrow.hasNoMatchingItems;">Matching Items</h3>
   <ol>
     <li ng-repeat="item in foundItems">
       <b>({{ item.short_name }}) {{ item.name }}</b>
