@@ -21,9 +21,8 @@
 
         promise.then(function (foundItems) {
           if (foundItems.length > 0) {
-            narrow.message = "Matching Items";
+            narrow.message = "Matching Items (" + foundItems.length + ")";
             narrow.found = foundItems;
-            console.log("narrow.found (" + narrow.found.length + " items)");
             console.log(narrow.found);
           } else {
             narrow.message = "No matching items!";
