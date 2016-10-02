@@ -1,11 +1,12 @@
-
-<h3>Matching Items</h3>
-<ol>
-  <li ng-repeat="item in found_items">
-    <b>({{ item.short_name }}) {{ item.name }}</b>
-    <br/>
-    {{ item.description }}
-    <button ng-click="narrow.onRemove({index: $index});">GO AWAY</button>
-  </li>
-</ol>
+<div>
+  <h3 ng-if="foundItems.length>0">Matching Items</h3>
+  <ol>
+    <li ng-repeat="item in foundItems">
+      <b>({{ item.short_name }}) {{ item.name }}</b>
+      <br/>
+      {{ item.description }}
+      <button ng-click="narrow.onRemove({index: $index});">GO AWAY</button>
+    </li>
+  </ol>
+</div>
 <!-- <div class="error" ng-if="list.cookiesInList()">WARNING! WARNING! COOKIES DETECTED!</div> -->
