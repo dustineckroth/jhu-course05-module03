@@ -22,7 +22,7 @@
 
         promise.then(function (foundItems) {
           if (foundItems.length > 0) {
-            narrow.message = "Matching Items (" + foundItems.length + ")";
+            narrow.message = "Matching Items";
             narrow.found = foundItems;
             console.log(narrow.found);
           } else {
