@@ -25,6 +25,10 @@
     <!-- Bonus loader (see Bonus section of the assignment) -->
     <!-- <items-loader-indicator></items-loader-indicator> -->
 
+    <ul>
+      <li ng-repeat="item in narrow.found">{{ item.name }}</li>
+    </ul>
+
     <!-- found-items should be implemented as a component -->
     <found-items found-items="narrow.found"
                  on-remove="narrow.removeItem(index)">
