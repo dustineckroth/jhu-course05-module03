@@ -16,7 +16,7 @@
 
     narrow.getMatchedMenuItems = function() {
 
-      if (narrow.searchTerm.trim().length > 0) {
+      // if (narrow.searchTerm.trim().length > 0) {
         var promise = MenuSearchService.getMatchedMenuItems(narrow.searchTerm);
 
         promise.then(function (foundItems) {
@@ -27,7 +27,7 @@
             narrow.hasNoMatchingItems = true;
           }
         }).catch(function (error) { console.log(error); });
-      }
+      // }
     };
 
     narrow.removeItem = function(index) {
