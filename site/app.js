@@ -13,7 +13,7 @@
 
     narrow.message = "No matching items!";
     narrow.hasNoMatchingItems = true;
-    narrow.found = MenuSearchService.getFoundItems();
+    narrow.found = [];
 
     narrow.getMatchedMenuItems = function() {
 
