@@ -77,7 +77,7 @@
       },
 
       controller: NarrowItDownController,
-      controllerAs: narrow,
+      controllerAs: 'narrow',
       bindToController: true,
       link: FoundItemsDirectiveLink
     }
