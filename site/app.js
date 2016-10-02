@@ -53,6 +53,7 @@
                   .then(function(result) {
         // process result and only keep items that match
         foundItems = [];
+        if (searchTerm === undefined) { searchTerm = ""; }
 
         if (searchTerm.trim().length > 0) {
           result.data.menu_items.forEach(function(item) {
