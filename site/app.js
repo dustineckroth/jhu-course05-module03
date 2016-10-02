@@ -44,7 +44,7 @@
     var foundItems = [];
 
     service.removeItem = function(index) {
-      found.splice(index, 1);
+      foundItems.splice(index, 1);
     };
 
     service.getMatchedMenuItems = function(searchTerm) {
