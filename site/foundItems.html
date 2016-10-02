@@ -4,16 +4,13 @@
 
   <h3>{{ narrow.listTitle }}</h3>
 
-  HELL-bcd...
-
   <ol>
     <li ng-repeat="item in narrow.foundItems">
-      HELL-o
+      <button ng-click="onRemove({index: $index});">
+        Don't want this one!</button>
       <b>({{ item.short_name }}) {{ item.name }}</b>
       <br/>
       {{ item.description }}
-      <button ng-click="onRemove({index: $index});">
-        Don't want this one!</button>
     </li>
   </ol>
 
